@@ -10,7 +10,7 @@ public class BuildingSystem : MonoBehaviour
     public void BuyHero(GameObject hero)
     {
         currentHero = hero;
-        Debug.Log("Ok");
+        //Debug.Log("Ok");
     }
     private void Update()
     {
@@ -23,7 +23,7 @@ public class BuildingSystem : MonoBehaviour
             Vector3 towerPosition = blockPosition + new Vector3(0, blockSize.y, 0);
             if (Input.GetMouseButtonDown(0) && !hit.collider.GetComponent<Node>().hasHero)
             {
-                Instantiate(currentHero, towerPosition, Quaternion.identity);
+                Instantiate(currentHero, towerPosition, Quaternion.Euler(0, 90, 0));
                 hit.collider.GetComponent<Node>().hasHero = true;
                 currentHero = null;
             }

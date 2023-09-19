@@ -19,7 +19,7 @@ public class Shop : MonoBehaviour
     private void BuyHero()
     {
         buildingSystem.BuyHero(heroToBuyed);
-        Debug.Log("Buyed");
+        //Debug.Log("Buyed");
     }
 
     private void OnValidate()
