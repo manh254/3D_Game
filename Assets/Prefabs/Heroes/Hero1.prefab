@@ -112,9 +112,6 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: -927199367670048503, guid: 5ab33fa4da49c7b4a92fc2e7f2f1a5df, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 3772627062122339532}
-    - targetCorrespondingSourceObject: {fileID: -927199367670048503, guid: 5ab33fa4da49c7b4a92fc2e7f2f1a5df, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 4732650292299899493}
   m_SourcePrefab: {fileID: 100100000, guid: 5ab33fa4da49c7b4a92fc2e7f2f1a5df, type: 3}
 --- !u!1 &2229822313373488007 stripped
@@ -122,20 +119,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 5ab33fa4da49c7b4a92fc2e7f2f1a5df, type: 3}
   m_PrefabInstance: {fileID: 7912831701155482254}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &3772627062122339532
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2229822313373488007}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a0018e340a69d34c9fd58165960c529, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefabHero: {fileID: 0}
-  health: 0
 --- !u!114 &4732650292299899493
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -148,6 +131,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00f2f3f612a016d4c9ebc58be8507c0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  poolSize: 7
   bullet: {fileID: 6145123964116245357, guid: ddb4c73827637c3429d4f0f34a42ee2b, type: 3}
   shootOrigin: {fileID: 8721595495661812409}
   cooldown: 2

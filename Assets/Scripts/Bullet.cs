@@ -12,13 +12,11 @@ public class Bullet : MonoBehaviour
     {
         shooter = new BasicShooter();
     }*/
-    /*public void SetShooter(BasicShooter shooter)
-    {
-        this.shooter = shooter;
-    }*/
+    
     private void Update()
     {
         transform.position = transform.position + new Vector3(speed * Time.deltaTime, 0, 0);
+        BulletOutDisplay();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -30,5 +28,11 @@ public class Bullet : MonoBehaviour
             shooter.ReturnBulletToPool(gameObject);
             Debug.Log("hit");
         }
+    }
+
+    private void BulletOutDisplay()
+    {
+        if(transform.position.x >= 10f)
+            shooter.ReturnBulletToPool(gameObject);
     }
 }

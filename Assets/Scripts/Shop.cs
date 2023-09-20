@@ -2,18 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Shop : MonoBehaviour
 {
     //public Sprite heroSprite;
-    public GameObject[] heroObject;
-    private GameObject heroToBuyed;
-
+    public Hero[] hero;
+    private Hero heroToBuyed;
+    public int money;
+    public TextMeshProUGUI moneyToBuy;
     private BuildingSystem buildingSystem;
     private void Start()
     {
         buildingSystem = GameObject.Find("BuildingSystem").GetComponent<BuildingSystem>();
-        //GetComponent<Button>().onClick.AddListener(BuyHero);
+        
+    }
+
+    private void Update()
+    {
+        moneyToBuy.text = money.ToString();
     }
 
     private void BuyHero()
@@ -22,34 +29,36 @@ public class Shop : MonoBehaviour
         //Debug.Log("Buyed");
     }
 
-    private void OnValidate()
+    public void BuyHeroSuccess(Hero hero)
     {
-
-    }
-
+        money -= hero.GetCost();
+        //Debug.Log(heroToBuyed.GetCost().ToString());
+    }   
+    
+    //Onclick by user
     public void BuyHero1()
     {
-        heroToBuyed = heroObject[0];
+        heroToBuyed = hero[0];
         BuyHero();
     }
     public void BuyHero2()
     {
-        heroToBuyed = heroObject[1];
+        heroToBuyed = hero[1];
         BuyHero();
     }
     public void BuyHero3()
     {
-        heroToBuyed = heroObject[2];
+        heroToBuyed = hero[2];
         BuyHero();
     }
     public void BuyHero4()
     {
-        heroToBuyed = heroObject[3];
+        heroToBuyed = hero[3];
         BuyHero();
     }
     public void BuyHero5()
     {
-        heroToBuyed = heroObject[4];
+        heroToBuyed = hero[4];
         BuyHero();
     }
 }
