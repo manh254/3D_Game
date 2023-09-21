@@ -134,7 +134,7 @@ MonoBehaviour:
   poolSize: 7
   bullet: {fileID: 6145123964116245357, guid: ddb4c73827637c3429d4f0f34a42ee2b, type: 3}
   shootOrigin: {fileID: 8721595495661812409}
-  cooldown: 2
+  timeBetweenShoot: 2
   range: 7
   shootMark:
     serializedVersion: 2

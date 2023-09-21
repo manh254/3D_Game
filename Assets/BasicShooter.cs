@@ -9,7 +9,7 @@ public class BasicShooter : MonoBehaviour
 
     public GameObject bullet;
     public Transform shootOrigin;
-    public float cooldown;
+    public float cooldown = 0.0f;
 
     private bool canShoot;
 
@@ -17,8 +17,11 @@ public class BasicShooter : MonoBehaviour
 
     public LayerMask shootMark;
 
+    private Animator animator;
+
     private void Start()
     {
+        animator = GetComponent<Animator>();
         Invoke("ResetCooldown", cooldown);
         for(int i = 0; i < poolSize; i++)
         {
@@ -30,30 +33,39 @@ public class BasicShooter : MonoBehaviour
     }
     private void Update()
     {
-        RaycastHit hit;
-        if(Physics.Raycast(transform.position, transform.forward, out hit, range, shootMark))
+        if(cooldown >= 1.0f)
         {
-            //Debug.Log("Seen");
-            Shoot();
+            cooldown = 0.0f;
         }
+        RaycastHit hit;
+        bool isTargetSeen = Physics.Raycast(transform.position, transform.forward, out hit, range, shootMark);
+        animator.SetBool("isShooting", isTargetSeen);
+        if (isTargetSeen && cooldown == 0.0f)
+        {
+            GetBulletFromPool();
+        }
+        cooldown += Time.deltaTime;
+        Debug.Log(cooldown.ToString());
     }
 
     private void ResetCooldown()
     {
         canShoot = true;
+        
     }
 
-    private void Shoot()
+    /*private void Shoot()
     {
         if (!canShoot)
         {
             return;
         }
         canShoot = false;
+
         Invoke("ResetCooldown", cooldown);
+        
         GetBulletFromPool();
-        //GameObject myBullet = Instantiate(bullet, shootOrigin.position, Quaternion.identity);
-    }
+    }*/
 
     public GameObject GetBulletFromPool()
     {
@@ -73,7 +85,6 @@ public class BasicShooter : MonoBehaviour
     public void ReturnBulletToPool(GameObject bulletIns)
     {
         bulletIns.SetActive(false);
-        Debug.Log("done");
         bulletPool.Enqueue(bulletIns);
     }
 }

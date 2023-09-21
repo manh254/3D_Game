@@ -23,10 +23,11 @@ public class Bullet : MonoBehaviour
     {
         if(other.TryGetComponent<Zombie>(out Zombie zombie))
         {
+
             zombie.Hit(damage);
             
             shooter.ReturnBulletToPool(gameObject);
-            Debug.Log("hit");
+            //Debug.Log("hit");
         }
     }
 

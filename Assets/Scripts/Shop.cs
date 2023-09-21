@@ -9,9 +9,12 @@ public class Shop : MonoBehaviour
     //public Sprite heroSprite;
     public Hero[] hero;
     private Hero heroToBuyed;
+    //private Zombie zombie;
     public int money;
     public TextMeshProUGUI moneyToBuy;
     private BuildingSystem buildingSystem;
+
+    public Zombie zombie;
     private void Start()
     {
         buildingSystem = GameObject.Find("BuildingSystem").GetComponent<BuildingSystem>();
@@ -29,12 +32,19 @@ public class Shop : MonoBehaviour
         //Debug.Log("Buyed");
     }
 
+    //subtract money to buy hero
     public void BuyHeroSuccess(Hero hero)
     {
         money -= hero.GetCost();
         //Debug.Log(heroToBuyed.GetCost().ToString());
     }   
     
+    //add money from killed zombie
+    public void KilledZombie()
+    {
+        money += zombie.GetMoneyKilled();
+    }
+
     //Onclick by user
     public void BuyHero1()
     {
