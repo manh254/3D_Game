@@ -11,7 +11,7 @@ public class BasicShooter : MonoBehaviour
     public Transform shootOrigin;
     public float cooldown = 0.0f;
 
-    private bool canShoot;
+    //private bool canShoot;
 
     public float range;
 
@@ -42,17 +42,17 @@ public class BasicShooter : MonoBehaviour
         animator.SetBool("isShooting", isTargetSeen);
         if (isTargetSeen && cooldown == 0.0f)
         {
-            GetBulletFromPool();
+            //GetBulletFromPool();
         }
         cooldown += Time.deltaTime;
         Debug.Log(cooldown.ToString());
     }
 
-    private void ResetCooldown()
+    /*private void ResetCooldown()
     {
         canShoot = true;
         
-    }
+    }*/
 
     /*private void Shoot()
     {
