@@ -60,6 +60,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Node.cs" />
+    <Compile Include="Assets\Scripts\ZombieBlueprint.cs" />
     <Compile Include="Assets\Scripts\Shop.cs" />
     <Compile Include="Assets\Scripts\ZombieSpawner.cs" />
     <Compile Include="Assets\BasicShooter.cs" />
@@ -68,7 +69,9 @@
     <Compile Include="Assets\Scripts\Hero.cs" />
     <Compile Include="Assets\Jammo-Character\Scripts\CharacterSkinController.cs" />
     <Compile Include="Assets\Scripts\Bullet.cs" />
+    <Compile Include="Assets\Scripts\HeroBlueprint.cs" />
     <Compile Include="Assets\Scripts\BuildingSystem.cs" />
+    <Compile Include="Assets\Scripts\Level.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

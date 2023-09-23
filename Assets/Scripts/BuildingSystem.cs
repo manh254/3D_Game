@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class BuildingSystem : MonoBehaviour
 {
-    public GameObject prefabsToBuild;
-    private Hero currentHero;
+    //private GameObject prefabsToBuild;
+    private HeroBlueprint currentHero;
     private Shop shop;
     //bool isEmpty = false;
     private void Start()
     {
         shop = GameObject.Find("Shop").GetComponent<Shop>();
     }
-    public void BuyHero(Hero hero)
+    public void BuyHero(HeroBlueprint hero)
     {
         currentHero = hero;
         //Debug.Log("Ok");
@@ -27,7 +27,7 @@ public class BuildingSystem : MonoBehaviour
             Vector3 blockSize = hit.collider.bounds.size;
             Vector3 blockPosition = hit.collider.transform.position;
             Vector3 towerPosition = blockPosition + new Vector3(0, blockSize.y, 0);
-            if (Input.GetMouseButtonDown(0) && !hit.collider.GetComponent<Node>().hasHero)
+            if (Input.GetMouseButtonDown(0) && !hit.collider.GetComponent<Node>().hasHero && currentHero.GetCost() <= shop.GetMoney())
             {
                 Instantiate(currentHero.GetHeroPrefabs(), towerPosition, Quaternion.Euler(0, 90, 0));
                 BuyHeroSuccess();

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Zombie : MonoBehaviour
 {
-    public GameObject zombiePrefabs;
+    //public GameObject zombiePrefabs;
     public int zombieHealth;
     public float speed;
     public int moneyKilled;
@@ -34,10 +34,10 @@ public class Zombie : MonoBehaviour
         return moneyKilled;
     }
 
-    public GameObject GetZombiePrefabs()
+    /*public GameObject GetZombiePrefabs()
     {
         return zombiePrefabs;
-    }
+    }*/
 
     public void SetZombieHealth(int zombieHealth)
     {
@@ -53,8 +53,8 @@ public class Zombie : MonoBehaviour
         return speed;
     }
 
-    public void SetZombiePrefab(GameObject zombiePrefab)
+    /*public void SetZombiePrefab(GameObject zombiePrefab)
     {
         this.zombiePrefabs = zombiePrefab;
-    }
+    }*/
 }

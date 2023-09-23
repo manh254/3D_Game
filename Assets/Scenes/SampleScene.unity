@@ -266,21 +266,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd9e6a463b108984488879e2e11aee41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hero:
-  - prefabHero: {fileID: 2229822313373488007, guid: c32f07d6964bf0041a9f61dcda2771be, type: 3}
-    health: 100
+  heroBlueprint:
+  - prefabs: {fileID: 2229822313373488007, guid: c32f07d6964bf0041a9f61dcda2771be, type: 3}
     cost: 100
-  - prefabHero: {fileID: 5718880038685772933, guid: d517916a0ee030745ab2fd73b09ca9a0, type: 3}
-    health: 100
+  - prefabs: {fileID: 5718880038685772933, guid: d517916a0ee030745ab2fd73b09ca9a0, type: 3}
     cost: 90
-  - prefabHero: {fileID: 267728285374396694, guid: 92b291a43be069c4a98048eee2839723, type: 3}
-    health: 100
+  - prefabs: {fileID: 267728285374396694, guid: 92b291a43be069c4a98048eee2839723, type: 3}
     cost: 80
-  - prefabHero: {fileID: 1165328501656924180, guid: f5c92517059c80e4494eb6c382bf0402, type: 3}
-    health: 100
+  - prefabs: {fileID: 1165328501656924180, guid: f5c92517059c80e4494eb6c382bf0402, type: 3}
     cost: 70
-  - prefabHero: {fileID: 7438396405242524802, guid: 17ca807d52e0768468316f1f869640bb, type: 3}
-    health: 100
+  - prefabs: {fileID: 7438396405242524802, guid: 17ca807d52e0768468316f1f869640bb, type: 3}
     cost: 60
   money: 500
   moneyToBuy: {fileID: 1509708483}
@@ -520,7 +515,19 @@ MonoBehaviour:
   - {fileID: 729460653}
   - {fileID: 1793201580}
   - {fileID: 1843667850}
-  zombie: {fileID: 5002334797771469336, guid: af87c8678a78afe45a5a1bc8318e8bca, type: 3}
+  zombieBlueprint:
+  - zombiePrefabs: {fileID: 2581751449232621901, guid: af87c8678a78afe45a5a1bc8318e8bca, type: 3}
+    amount: 10
+    minTimeSummon: 3
+    maxTimeSummon: 5
+  - zombiePrefabs: {fileID: 2581751449232621901, guid: 201ed4b90a4dedb488847ccb023ebcf9, type: 3}
+    amount: 5
+    minTimeSummon: 5
+    maxTimeSummon: 8
+  - zombiePrefabs: {fileID: 2581751449232621901, guid: 21f7b7d40d92f934e9bef622282b4c61, type: 3}
+    amount: 3
+    minTimeSummon: 11
+    maxTimeSummon: 15
 --- !u!1001 &204339388
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2917,7 +2924,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46ecadad03debbc4db109a62b865f9c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabsToBuild: {fileID: 0}
 --- !u!4 &1234039873
 Transform:
   m_ObjectHideFlags: 0

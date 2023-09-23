@@ -22,7 +22,7 @@ public class BasicShooter : MonoBehaviour
     private void Start()
     {
         animator = GetComponent<Animator>();
-        Invoke("ResetCooldown", cooldown);
+        //Invoke("ResetCooldown", cooldown);
         for(int i = 0; i < poolSize; i++)
         {
             GameObject bulletIns = Instantiate(bullet, shootOrigin.position, Quaternion.identity);

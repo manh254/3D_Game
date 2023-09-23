@@ -7,8 +7,9 @@ using TMPro;
 public class Shop : MonoBehaviour
 {
     //public Sprite heroSprite;
-    public Hero[] hero;
-    private Hero heroToBuyed;
+    public HeroBlueprint[] heroBlueprint;
+    private HeroBlueprint heroToBuyed;
+
     //private Zombie zombie;
     public int money;
     public TextMeshProUGUI moneyToBuy;
@@ -33,9 +34,9 @@ public class Shop : MonoBehaviour
     }
 
     //subtract money to buy hero
-    public void BuyHeroSuccess(Hero hero)
+    public void BuyHeroSuccess(HeroBlueprint heroBlueprint)
     {
-        money -= hero.GetCost();
+        money -= heroBlueprint.GetCost();
         //Debug.Log(heroToBuyed.GetCost().ToString());
     }   
     
@@ -45,30 +46,35 @@ public class Shop : MonoBehaviour
         money += zombie.GetMoneyKilled();
     }
 
+    public int GetMoney()
+    {
+        return money;
+    }
+
     //Onclick by user
     public void BuyHero1()
     {
-        heroToBuyed = hero[0];
+        heroToBuyed = heroBlueprint[0];
         BuyHero();
     }
     public void BuyHero2()
     {
-        heroToBuyed = hero[1];
+        heroToBuyed = heroBlueprint[1];
         BuyHero();
     }
     public void BuyHero3()
     {
-        heroToBuyed = hero[2];
+        heroToBuyed = heroBlueprint[2];
         BuyHero();
     }
     public void BuyHero4()
     {
-        heroToBuyed = hero[3];
+        heroToBuyed = heroBlueprint[3];
         BuyHero();
     }
     public void BuyHero5()
     {
-        heroToBuyed = hero[4];
+        heroToBuyed = heroBlueprint[4];
         BuyHero();
     }
 }
