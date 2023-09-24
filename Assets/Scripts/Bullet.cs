@@ -7,11 +7,6 @@ public class Bullet : MonoBehaviour
     public int damage;
     public float speed = 0.8f;
     public BasicShooter shooter;
-
-    /*private void Start()
-    {
-        shooter = new BasicShooter();
-    }*/
     
     private void Update()
     {
@@ -27,7 +22,6 @@ public class Bullet : MonoBehaviour
             zombie.Hit(damage);
             
             shooter.ReturnBulletToPool(gameObject);
-            //Debug.Log("hit");
         }
     }
 

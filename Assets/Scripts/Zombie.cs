@@ -10,13 +10,27 @@ public class Zombie : MonoBehaviour
     public int moneyKilled;
     private Shop shop;
 
+    public float range;
+
+    public LayerMask shootMark;
+
+    private Animator animator;
+
+
     private void Start()
     {
+        animator = GetComponent<Animator>();
         shop = GameObject.Find("Shop").GetComponent<Shop>();
     }
-    private void FixedUpdate()
+    private void Update()
     {
-        transform.position -= new Vector3(speed, 0, 0) * Time.deltaTime;
+        RaycastHit hit;
+        bool isTargetSeen = Physics.Raycast(transform.position, transform.forward, out hit, range, shootMark);
+        animator.SetBool("isAttacking", isTargetSeen);
+        if (!isTargetSeen)
+        {
+            transform.position -= new Vector3(speed, 0, 0) * Time.deltaTime;
+        }
     }
 
     public void Hit(int damage)
@@ -29,15 +43,13 @@ public class Zombie : MonoBehaviour
         }
     }
 
+
+
+
     public int GetMoneyKilled()
     {
         return moneyKilled;
     }
-
-    /*public GameObject GetZombiePrefabs()
-    {
-        return zombiePrefabs;
-    }*/
 
     public void SetZombieHealth(int zombieHealth)
     {

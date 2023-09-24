@@ -4,10 +4,8 @@ using UnityEngine;
 
 public class BuildingSystem : MonoBehaviour
 {
-    //private GameObject prefabsToBuild;
     private HeroBlueprint currentHero;
     private Shop shop;
-    //bool isEmpty = false;
     private void Start()
     {
         shop = GameObject.Find("Shop").GetComponent<Shop>();
@@ -15,7 +13,6 @@ public class BuildingSystem : MonoBehaviour
     public void BuyHero(HeroBlueprint hero)
     {
         currentHero = hero;
-        //Debug.Log("Ok");
     }
 
     private void Update()

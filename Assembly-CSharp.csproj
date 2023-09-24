@@ -63,9 +63,9 @@
     <Compile Include="Assets\Scripts\ZombieBlueprint.cs" />
     <Compile Include="Assets\Scripts\Shop.cs" />
     <Compile Include="Assets\Scripts\ZombieSpawner.cs" />
-    <Compile Include="Assets\BasicShooter.cs" />
     <Compile Include="Assets\Scripts\Zombie.cs" />
     <Compile Include="Assets\Jammo-Character\Scripts\MovementInput.cs" />
+    <Compile Include="Assets\Scripts\BasicShooter.cs" />
     <Compile Include="Assets\Scripts\Hero.cs" />
     <Compile Include="Assets\Jammo-Character\Scripts\CharacterSkinController.cs" />
     <Compile Include="Assets\Scripts\Bullet.cs" />
