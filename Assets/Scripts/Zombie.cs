@@ -8,6 +8,7 @@ public class Zombie : MonoBehaviour
     public int zombieHealth;
     public float speed;
     public int moneyKilled;
+    public int damage;
     private Shop shop;
 
     public float range;
@@ -27,6 +28,11 @@ public class Zombie : MonoBehaviour
         RaycastHit hit;
         bool isTargetSeen = Physics.Raycast(transform.position, transform.forward, out hit, range, shootMark);
         animator.SetBool("isAttacking", isTargetSeen);
+        /*if(isTargetSeen )
+        {
+            hit.collider.GetComponent<Hero>().HeroTakeDamage(damage);
+        }*/
+        
         if (!isTargetSeen)
         {
             transform.position -= new Vector3(speed, 0, 0) * Time.deltaTime;
@@ -43,7 +49,15 @@ public class Zombie : MonoBehaviour
         }
     }
 
-
+    public void ZombieAttack()
+    {
+        RaycastHit hit;
+        bool isTargetSeen = Physics.Raycast(transform.position, transform.forward, out hit, range, shootMark);
+        if (isTargetSeen)
+        {
+            hit.collider.GetComponent<Hero>().HeroTakeDamage(damage);
+        }
+    }
 
 
     public int GetMoneyKilled()

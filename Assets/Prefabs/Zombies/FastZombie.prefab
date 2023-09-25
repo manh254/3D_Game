@@ -391,8 +391,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.3, y: 2.2, z: 1.3}
-  m_Center: {x: 0, y: 1, z: 0.1}
+  m_Size: {x: 1.3, y: 1.8, z: 1.3}
+  m_Center: {x: 0, y: 0.8, z: 0.3}
 --- !u!114 &6486451588324948756
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -408,7 +408,8 @@ MonoBehaviour:
   zombieHealth: 10
   speed: 0.5
   moneyKilled: 50
-  range: 0.5
+  damage: 3
+  range: 0.3
   shootMark:
     serializedVersion: 2
     m_Bits: 256

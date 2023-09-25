@@ -247,6 +247,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 5ab33fa4da49c7b4a92fc2e7f2f1a5df, type: 3}
+      propertyPath: m_TagString
+      value: Hero
+      objectReference: {fileID: 0}
     - target: {fileID: -819139046232449951, guid: 5ab33fa4da49c7b4a92fc2e7f2f1a5df, type: 3}
       propertyPath: m_Layer
       value: 0
@@ -504,7 +508,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -522,7 +526,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a0018e340a69d34c9fd58165960c529, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  heroHealth: 10
+  node: {fileID: 0}
+  range: 3
+  shootMark:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!4 &2930350549650579860 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 5ab33fa4da49c7b4a92fc2e7f2f1a5df, type: 3}

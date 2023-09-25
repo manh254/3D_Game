@@ -375,7 +375,8 @@ MonoBehaviour:
   zombieHealth: 10
   speed: 0.5
   moneyKilled: 50
-  range: 0.5
+  damage: 3
+  range: 0.3
   shootMark:
     serializedVersion: 2
     m_Bits: 256

@@ -62,6 +62,7 @@
     <Compile Include="Assets\Scripts\Node.cs" />
     <Compile Include="Assets\Scripts\ZombieBlueprint.cs" />
     <Compile Include="Assets\Scripts\Shop.cs" />
+    <Compile Include="Assets\Scripts\BasicAttack.cs" />
     <Compile Include="Assets\Scripts\ZombieSpawner.cs" />
     <Compile Include="Assets\Scripts\Zombie.cs" />
     <Compile Include="Assets\Jammo-Character\Scripts\MovementInput.cs" />

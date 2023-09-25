@@ -277,7 +277,7 @@ MonoBehaviour:
     cost: 70
   - prefabs: {fileID: 7438396405242524802, guid: 17ca807d52e0768468316f1f869640bb, type: 3}
     cost: 60
-  money: 500
+  money: 500000
   moneyToBuy: {fileID: 1509708483}
   zombie: {fileID: 5002334797771469336, guid: af87c8678a78afe45a5a1bc8318e8bca, type: 3}
 --- !u!1001 &51742779
