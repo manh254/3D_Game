@@ -40,4 +40,8 @@ public class BuildingSystem : MonoBehaviour
         shop.BuyHeroSuccess(currentHero);
     }
 
+    public HeroBlueprint GetCurrentHero()
+    {
+        return currentHero;
+    }
 }

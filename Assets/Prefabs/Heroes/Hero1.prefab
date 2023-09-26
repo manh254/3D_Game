@@ -250,15 +250,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 5ab33fa4da49c7b4a92fc2e7f2f1a5df, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.5
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 5ab33fa4da49c7b4a92fc2e7f2f1a5df, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.5
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 5ab33fa4da49c7b4a92fc2e7f2f1a5df, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.5
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 5ab33fa4da49c7b4a92fc2e7f2f1a5df, type: 3}
       propertyPath: m_LocalPosition.x
@@ -631,8 +631,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.64, y: 1.8, z: 1.5}
-  m_Center: {x: 0, y: 0.7, z: 0.3}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1649253304454327043
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -646,7 +646,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   heroHealth: 10
-  range: 3
+  range: 0.01
   shootMark:
     serializedVersion: 2
     m_Bits: 64

@@ -5,7 +5,7 @@ using UnityEngine;
 public class Zombie : MonoBehaviour
 {
     public float zombieHealth;
-    public float zombieCurrentHealth;
+    private float zombieCurrentHealth;
     public float speed;
     public int moneyKilled;
     public float damage;
