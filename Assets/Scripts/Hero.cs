@@ -36,7 +36,7 @@ public class Hero : MonoBehaviour
     public void HeroTakeDamage(float damage)
     {
         heroCurrentHealth -= damage;
-        if(heroCurrentHealth < 0)
+        if(heroCurrentHealth <= 0)
         {
             TakeNode();
             Destroy(gameObject);

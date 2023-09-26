@@ -524,14 +524,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed5394440588444294e9384d9f2193d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  zombieHealth: 10
+  zombieHealth: 15
+  zombieCurrentHealth: 0
   speed: 0.5
   moneyKilled: 50
-  damage: 3
+  damage: 5
   range: 0.3
   shootMark:
     serializedVersion: 2
     m_Bits: 256
+  endGame: {fileID: 0}
 --- !u!114 &-2928735821415891929
 MonoBehaviour:
   m_ObjectHideFlags: 0
