@@ -11,7 +11,7 @@ public class Shop : MonoBehaviour
     private HeroBlueprint heroToBuyed;
 
 
-    public int money;
+    public float money;
     public TextMeshProUGUI moneyToBuy;
     private BuildingSystem buildingSystem;
 
@@ -45,7 +45,7 @@ public class Shop : MonoBehaviour
         money += zombie.GetMoneyKilled();
     }
 
-    public int GetMoney()
+    public float GetMoney()
     {
         return money;
     }

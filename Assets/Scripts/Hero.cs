@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class Hero : MonoBehaviour
 {
-    public int heroHealth;
-    private int heroCurrentHealth;
-    public Node node;
+    public float heroHealth;
+    private float heroCurrentHealth;
+    //public Node node;
+    private HealthBar healthBar;
 
     public float range;
 
@@ -14,12 +15,14 @@ public class Hero : MonoBehaviour
     private void Start()
     {
         heroCurrentHealth = heroHealth;
+        healthBar = GetComponent<HealthBar>();
     }
 
-    /*private void Update()
+    private void Update()
     {
-        
-    }*/
+        healthBar.UpdateHealthBar(heroHealth, heroCurrentHealth);
+    }
+
     public void TakeNode()
     {
         RaycastHit hit;
@@ -30,7 +33,7 @@ public class Hero : MonoBehaviour
         }
     }
 
-    public void HeroTakeDamage(int damage)
+    public void HeroTakeDamage(float damage)
     {
         heroCurrentHealth -= damage;
         if(heroCurrentHealth < 0)
