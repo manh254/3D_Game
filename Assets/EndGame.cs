@@ -1,34 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.SceneManagement;
-
-public class EndGame : MonoBehaviour
-{
-    public GameObject endGameGUI;
-    
-    public void EndedGame()
-    {
-        Time.timeScale = 0f;
-        if (!endGameGUI.activeSelf)
-            endGameGUI.SetActive(true);
-    }
-
-    public void Restart()
-    {
-        Time.timeScale = 1f;
-        SceneManager.LoadScene("MainScene");
-        
-    }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:004ff6eb11649e544374ed55faa2b3e5b8ef6044dc0291f5d843b51966b2d44e
+size 903
