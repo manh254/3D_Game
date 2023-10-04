@@ -1,16 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-[System.Serializable]
-public class ZombieBlueprint
-{
-    public GameObject zombiePrefabs;
-    public int amount;
-    public int minTimeSummon;
-    public int maxTimeSummon;
-    public GameObject GetZombiePrefabs()
-    {
-        return zombiePrefabs;
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b97f54297177e4abbf2fd114ae0994306cf625f122dccf0783bc7d79140e50d7
+size 320
